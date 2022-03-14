@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, VERSION } from '@angular/core';
+import { NgxQrcodeElementTypes, NgxQrcodeErrorCorrectionLevels } from 'ngx-qrcode2';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'QRCode';
+  name = 'Angular' + VERSION.major;
+  elementType = NgxQrcodeElementTypes.URL; 
+  correctionLevel =   NgxQrcodeErrorCorrectionLevels.HIGH;
+  value = 'https://www.cozentus.com/';
 }
